@@ -1,16 +1,18 @@
-#include <sys/types.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdio.h>
+#include <sys/types.h> /* Para el tipo pid_t devuelto por getpid */
+#include <unistd.h> /* for y getpid */
+#include <stdlib.h> /* malloc y free */
+#include <stdio.h> /* printf */
 
 int main(void)
 {
 	int *valor = malloc(sizeof(int));
+	long pid = 0;
 
 	*valor = 0;
 	fork();
 	*valor = 13;
-	printf("%ld: %d\n", (long)getpid(), *valor);
+	pid = (long)getpid();
+	printf("%ld: %d\n", pid, *valor);
 	free(valor);
 
 	return 0;
