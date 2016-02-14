@@ -1,5 +1,5 @@
 #include <sys/types.h> /* Para el tipo pid_t devuelto por getpid */
-#include <unistd.h> /* for y getpid */
+#include <unistd.h> /* fork y getpid */
 #include <stdlib.h> /* malloc y free */
 #include <stdio.h> /* printf */
 
