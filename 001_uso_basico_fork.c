@@ -5,15 +5,15 @@
 
 int uso_basico_fork(void)
 {
-	int *valor = malloc(sizeof(int));
-	long pid = 0;
+    int *valor = malloc(sizeof(int));
+    long pid = 0;
 
-	*valor = 0;
-	fork();
-	*valor = 13;
-	pid = (long)getpid();
-	printf("%ld: %d\n", pid, *valor);
-	free(valor);
+    *valor = 0;
+    fork();
+    *valor = 13;
+    pid = (long)getpid();
+    printf("%ld: %d\n", pid, *valor);
+    free(valor);
 
-	return 0;
+    return 0;
 }
