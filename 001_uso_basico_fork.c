@@ -3,7 +3,7 @@
 #include <stdlib.h> /* malloc y free */
 #include <stdio.h> /* printf */
 
-int main(void)
+int uso_basico_fork(void)
 {
 	int *valor = malloc(sizeof(int));
 	long pid = 0;
